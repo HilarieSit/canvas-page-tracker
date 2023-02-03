@@ -89,7 +89,7 @@ export default {
         if (json_projects){
             this.projects = JSON.parse(json_projects)
         } else { 
-            fetch('http://34.125.83.68//api/projects/', {
+            fetch('http://34.125.83.68/api/projects/', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
