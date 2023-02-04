@@ -5,6 +5,6 @@ module.exports = defineConfig({
 
 module.exports = {
   devServer: {
-      proxy: 'https://localhost:5000'
+      proxy: 'https://a3model.com'
   }
 }
