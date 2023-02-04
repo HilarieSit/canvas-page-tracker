@@ -36,7 +36,7 @@ export default {
     },
     methods: {
         deleteProject(project){
-            fetch(`http://34.125.83.68/api/projects/${project.id}/`, {
+            fetch(`https://a3model/api/projects/${project.id}/`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -55,7 +55,7 @@ export default {
         },
         insertProject(){
             if (this.course_id) {
-                fetch('http://34.125.83.68/api/create_project/', {
+                fetch('https://a3model/api/create_project/', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -89,7 +89,7 @@ export default {
         if (json_projects){
             this.projects = JSON.parse(json_projects)
         } else { 
-            fetch('http://34.125.83.68/api/projects/', {
+            fetch('https://a3model/api/projects/', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

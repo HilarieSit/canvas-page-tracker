@@ -141,7 +141,7 @@ export default {
     },
     addAsset(event){
       var elements = event.target.elements
-        fetch(`http://34.125.83.68/api/projects/${this.id}/add_page/`, {
+        fetch(`https://a3model/api/projects/${this.id}/add_page/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -158,7 +158,7 @@ export default {
         })
     },
     editAsset(){
-      fetch(`http://34.125.83.68/api/pages/${this.page.id}/`, {
+      fetch(`https://a3model/api/pages/${this.page.id}/`, {
           method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -174,7 +174,7 @@ export default {
       })
     },
     deleteAsset(){
-      fetch(`http://34.125.83.68/api/pages/${this.page.id}/`, {
+      fetch(`https://a3model/api/pages/${this.page.id}/`, {
           method: "DELETE",
           headers: {
               "Content-Type": "application/json"
@@ -209,7 +209,7 @@ export default {
       } else {
         pages[pageIndex].position = (pages[pageIndex-1].position+pages[pageIndex+1].position)/2
       }
-      fetch(`http://34.125.83.68/api/pages/${pages[pageIndex].id}/edit_position/`, {
+      fetch(`https://a3model/api/pages/${pages[pageIndex].id}/edit_position/`, {
         method: "POST",
           headers: {
               "Content-Type": "application/json"
@@ -275,7 +275,7 @@ export default {
       }
     } 
     else {
-      fetch(`http://34.125.83.68/api/projects/${this.id}/`, {
+      fetch(`https://a3model/api/projects/${this.id}/`, {
           method: "GET",
           headers: {
               "Content-Type": "application/json"
