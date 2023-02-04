@@ -65,7 +65,7 @@ export default {
         addComment(label, event){
             var description = event.target.innerText.replace(/\s+/, " ")
             event.target.innerHTML = ""
-            fetch(`https://a3model/api/pages/${this.page.id}/add_comment/`, {
+            fetch(`https://a3model.com/api/pages/${this.page.id}/add_comment/`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -116,7 +116,7 @@ export default {
             this.comments = JSON.parse(json_comments)
             this.getPageData()
         } else { 
-            fetch(`https://a3model/api/projects/${proj_id}/get_comments/`, {
+            fetch(`https://a3model.com/api/projects/${proj_id}/get_comments/`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"

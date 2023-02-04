@@ -39,7 +39,7 @@ export default {
       return color
     },
     editStatus(event){
-      fetch(`https://a3model/api/pages/${this.page.id}/edit_status/`, {
+      fetch(`https://a3model.com/api/pages/${this.page.id}/edit_status/`, {
           method: "POST",
             headers: {
                 "Content-Type": "application/json"
