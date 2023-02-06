@@ -77,6 +77,7 @@ export default {
                 const groupIndex = this.groups.findIndex(g => g.label === label)
                 this.groups[groupIndex].comments.unshift(data.data)
                 this.comments.push(data.data)
+                console.log(this.comments)
                 this.$emit('comment', data.data)
             })
             .catch(error => {
@@ -110,28 +111,13 @@ export default {
     },
     created(){
         const proj_id = this.page.proj_id
-        // // localStorage.removeItem(proj_id+'comments')
-        // const json_comments = localStorage.getItem(proj_id+'comments')
-        // if (json_comments){
-        //     this.comments = JSON.parse(json_comments)
-        //     this.getPageData()
-        // } else { 
-        //     fetch(`https://a3model.com/api/projects/${proj_id}/get_comments/`, {
-        //         method: "GET",
-        //         headers: {
-        //             "Content-Type": "application/json"
-        //         }
-        //     })
-        //     .then(resp => resp.json())
-        //     .then(data => {
-        //         this.comments = data.data
-        //         this.getPageData()
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
-        // }
-        fetch(`https://a3model.com/api/projects/${proj_id}/get_comments/`, {
+        // localStorage.removeItem(proj_id+'comments')
+        const json_comments = localStorage.getItem(proj_id+'comments')
+        if (json_comments){
+            this.comments = JSON.parse(json_comments)
+            this.getPageData()
+        } else { 
+            fetch(`https://a3model.com/api/projects/${proj_id}/get_comments/`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -145,6 +131,22 @@ export default {
             .catch(error => {
                 console.log(error)
             })
+        }
+        // fetch(`https://a3model.com/api/projects/${proj_id}/get_comments/`, {
+        //         method: "GET",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         }
+        //     })
+        //     .then(resp => resp.json())
+        //     .then(data => {
+        //         this.comments = data.data
+        //         console.log(proj_id)
+        //         this.getPageData()
+        //     })
+        //     .catch(error => {
+        //         console.log(error)
+        //     })
     }
 }
 </script>
