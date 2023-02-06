@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <router-link class="navbar-brand" to="/">track</router-link>
+        <router-link class="navbar-brand" to="/">mytrackers</router-link>
     </nav>
 </template>
 

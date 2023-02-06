@@ -295,6 +295,11 @@ export default {
 </script>
 
 <style scoped>
+h1{
+    font-weight: 400;
+    text-align: center;
+    padding-top: 30px;
+}
 h3{
   text-align: center;
   margin-top: 20px;
@@ -446,6 +451,12 @@ select{
   border: 1px solid rgba(0,0,0,.125);
   font-size: 30px;
   background-color: #fff;
+}
+
+.list-group-item{
+  padding: 0;
+  margin: 0;
+  align-items: center;
 }
 
 .btn-form{

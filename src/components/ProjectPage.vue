@@ -107,7 +107,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page{
     padding: 15px 20px;
     background-color: #eee;
@@ -115,7 +115,6 @@ export default {
 }
 h1{
     font-weight: 400;
-    font-size: 30px !important; 
     text-align: center;
     padding-top: 30px;
 }
@@ -133,6 +132,7 @@ h1{
     margin: 10px !important;
     border-radius: 10px;
     background-color: white;
+    padding: 20px;
 
     height: 150px;
     width: 300px;
@@ -144,9 +144,9 @@ h1{
 .card-body-create{
     border-radius: 10px;
     margin: 10px auto;
-    width: 300px;
     display: flex;
     align-items: flex-start;
+    justify-content: center;
 }
 #addproject{
     border: none;
@@ -155,7 +155,7 @@ h1{
 .form-control{
     border: none;
     margin: 0;
-    padding: 0;
+    padding: 7px;
     width: auto;
     margin-right: 10px;
 

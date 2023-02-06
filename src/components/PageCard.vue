@@ -67,8 +67,12 @@ p{
 }
 .task-card{
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: 0px !important;
+  border: 1px solid rgba(0,0,0,.125);
+  background-color: #fff;
+  padding: 5px 10px;
 }
 .btn-link{
   margin-left: auto;
