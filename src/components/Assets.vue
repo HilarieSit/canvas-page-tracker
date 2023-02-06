@@ -268,14 +268,29 @@ export default {
     }
   },
   created(){
-    if (localStorage.getItem(this.id+'groups')){
-      this.groups = JSON.parse(localStorage.getItem(this.id+'groups'))
-      if (localStorage.getItem(this.id+'projectname')){
-        this.projectname = JSON.parse(localStorage.getItem(this.id+'projectname'))
-      }
-    } 
-    else {
-      fetch(`https://a3model.com/api/projects/${this.id}/`, {
+    // if (localStorage.getItem(this.id+'groups')){
+    //   this.groups = JSON.parse(localStorage.getItem(this.id+'groups'))
+    //   if (localStorage.getItem(this.id+'projectname')){
+    //     this.projectname = JSON.parse(localStorage.getItem(this.id+'projectname'))
+    //   }
+    // } 
+    // else {
+    //   fetch(`https://a3model.com/api/projects/${this.id}/`, {
+    //       method: "GET",
+    //       headers: {
+    //           "Content-Type": "application/json"
+    //       }
+    //   })
+    //   .then(resp => resp.json())
+    //   .then(data => {
+    //       this.projectname = data.data.name
+    //       this.groups = this.getGroups(data.data.pages)
+    //   })
+    //   .catch(error => {
+    //       console.log(error)
+    //   })
+    // }
+    fetch(`https://a3model.com/api/projects/${this.id}/`, {
           method: "GET",
           headers: {
               "Content-Type": "application/json"
@@ -289,7 +304,6 @@ export default {
       .catch(error => {
           console.log(error)
       })
-    }
   }
 };
 </script>

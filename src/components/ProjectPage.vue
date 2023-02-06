@@ -85,11 +85,7 @@ export default {
         }
     },
     created() {
-        const json_projects = localStorage.getItem('projects')
-        if (json_projects){
-            this.projects = JSON.parse(json_projects)
-        } else { 
-            fetch('https://a3model.com/api/projects/', {
+        fetch('https://a3model.com/api/projects/', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -102,7 +98,24 @@ export default {
             .catch(error => {
                 console.log(error)
             })
-        }
+        // const json_projects = localStorage.getItem('projects')
+        // if (json_projects){
+        //     this.projects = JSON.parse(json_projects)
+        // } else { 
+        //     fetch('https://a3model.com/api/projects/', {
+        //         method: "GET",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         }
+        //     })
+        //     .then(resp => resp.json())
+        //     .then(data => {
+        //         this.projects.push(...data.data)
+        //     })
+        //     .catch(error => {
+        //         console.log(error)
+        //     })
+        // }
     }
 }
 </script>
